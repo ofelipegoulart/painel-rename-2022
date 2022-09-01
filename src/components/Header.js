@@ -1,4 +1,5 @@
-import styled from 'styled-components'; // eslint-disable-next-line
+import styled from 'styled-components';
+import logo from '../assets/img/logo.png';
 
 const HeaderMobile = styled.div`
     @media screen and (min-device-width: 480px){
@@ -8,6 +9,7 @@ const HeaderMobile = styled.div`
 
 const Titulo = styled.h2`
     max-width:50%;
+    color: linear-gradient(90deg, #005496 50%,red 50%);
 `;
 
 const HeaderSite = styled.div`
@@ -21,6 +23,7 @@ const HeaderSite = styled.div`
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: space-between;
     padding:1rem;
+    font-family: Open Sans;
     }
 `;
 
@@ -45,10 +48,31 @@ const HTMLNav = styled.a`
     text-decoration: none;
 `;
 
+const LogoWeb = styled.img`
+    width:17.813rem;
+    height:1.563rem;
+    padding:0.9rem;
+`;
+
 function Header() {
   return (
     <div>
-      <h1>Estamos na home</h1>
+      <div>
+      <HeaderMobile>
+      <Titulo>Painel RENAME 2022</Titulo>
+        <ul>
+          <li><a>Sobre</a></li>
+          <li><a>Pesquisar</a></li>
+        </ul>
+      </HeaderMobile>
+      <HeaderSite>
+      <a href="/"><LogoWeb src={logo}></LogoWeb></a>
+        <NavigationLinks>
+            <LinkNavigation><HTMLNav href="/sobre">Sobre</HTMLNav></LinkNavigation>
+            <LinkNavigation><HTMLNav href="/sobre">Pesquisar</HTMLNav></LinkNavigation>
+        </NavigationLinks>
+        </HeaderSite>
+      </div>
       </div>
   );
 }
