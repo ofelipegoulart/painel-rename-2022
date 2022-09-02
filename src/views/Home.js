@@ -3,16 +3,15 @@ import styled from 'styled-components';
 import SUSLogo from '../assets/img/SUSLogo.png'
 import Footer from '../components/Footer';
 
-
 const Banner = styled.div`
+    position:relative;
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
-    margin-top:2rem;
     justify-content: center;
     align-items: center;
-    margin-bottom:5.2rem;
+    height: 75.1vh;
 `;
 
 const Titulo1 = styled.p`
@@ -42,8 +41,10 @@ function Home() {
             <ImageSUS src={SUSLogo}></ImageSUS>
             <Titulo1>Torne a pesquisa por insumos disponíveis pelo SUS <HightlightText>acessível</HightlightText></Titulo1>
         </Banner>
+        <Footer />
     </div>
     );
   }
+
   
   export default Home;

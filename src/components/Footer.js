@@ -12,13 +12,13 @@ const FooterSite = styled.footer`
         display:none;
     }
     @media screen and (min-device-width:992px) {
-        position:relative;
+        position:absolute;
         bottom:0;
-        margin-top:2.5rem;
         width:100%;
-        display:flex;
-        justify-content:center;
         background-color: #25409a;
+        text-align: center;
+        color:  #FFFFFF;
+        height: 12vh;
     }
 `;
 
@@ -28,7 +28,7 @@ const Disclaimer = styled.div`
     font-size:16px;
     text-align:center;
     width:32rem;
-    margin:0.5rem;
+    margin:15px auto 15px auto;
     line-height:22px;
     color: #fff;
 `;
@@ -37,11 +37,9 @@ const Disclaimer = styled.div`
 
 function Footer() {
   return (
-    <div>
       <FooterSite>
         <Disclaimer>ATENÇÃO: o sistema desenvolvido é extra-oficial e não possui relação com o Ministério da Saúde.</Disclaimer>
       </FooterSite>
-      </div>
   );
 }
 

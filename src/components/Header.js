@@ -24,6 +24,7 @@ const HeaderSite = styled.div`
     justify-content: space-between;
     padding:1rem;
     font-family: Open Sans;
+    height: 8vh;
     }
 `;
 
