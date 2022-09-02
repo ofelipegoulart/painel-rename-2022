@@ -70,7 +70,7 @@ function Header() {
       <a href="/"><LogoWeb src={logo}></LogoWeb></a>
         <NavigationLinks>
             <LinkNavigation><HTMLNav href="/sobre">Sobre</HTMLNav></LinkNavigation>
-            <LinkNavigation><HTMLNav href="/sobre">Pesquisar</HTMLNav></LinkNavigation>
+            <LinkNavigation><HTMLNav href="/pesquisar">Pesquisar</HTMLNav></LinkNavigation>
         </NavigationLinks>
         </HeaderSite>
       </div>
