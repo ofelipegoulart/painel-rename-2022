@@ -12,6 +12,10 @@ const FooterSite = styled.footer`
         display:none;
     }
     @media screen and (min-device-width:992px) {
+        
+        @keyframes fadeIn {
+            from {opacity: 0%} to {opacity:100%}
+        }
         position:absolute;
         bottom:0;
         width:100%;
@@ -19,6 +23,7 @@ const FooterSite = styled.footer`
         text-align: center;
         color:  #FFFFFF;
         height: 12vh;
+        animation: fadeIn 1s;
     }
 `;
 

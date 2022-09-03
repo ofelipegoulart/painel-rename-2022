@@ -4,6 +4,9 @@ import SUSLogo from '../assets/img/SUSLogo.png'
 import Footer from '../components/Footer';
 
 const Banner = styled.div`
+    @keyframes fadeIn {
+        from {opacity: 0%} to {opacity:100%}
+    }
     position:relative;
     display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
@@ -12,6 +15,7 @@ const Banner = styled.div`
     justify-content: center;
     align-items: center;
     height: 75.1vh;
+    animation: fadeIn 0.7s;
 `;
 
 const Titulo1 = styled.p`

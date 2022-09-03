@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Search = styled.div`
+    @keyframes fadeIn {
+            from {opacity: 0%} to {opacity:100%}
+        }
     display:flex;
     flex-direction:column;
     align-items:center;
     align-content:center;
     width:100%;
     height:80vh;
-
+    animation: fadeIn 1s;
 `;
 
 const SearchArea = styled.div`

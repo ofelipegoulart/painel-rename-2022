@@ -13,6 +13,10 @@ const Titulo = styled.h2`
 `;
 
 const HeaderSite = styled.div`
+    @keyframes fadeIn {
+            from {opacity: 0%} to {opacity:100%}
+        }
+
     @media screen and (max-device-width:991px) {
         display:none;
     }
@@ -25,6 +29,7 @@ const HeaderSite = styled.div`
     padding:1rem;
     font-family: Open Sans;
     height: 8vh;
+    animation:fadeIn 1s;
     }
 `;
 

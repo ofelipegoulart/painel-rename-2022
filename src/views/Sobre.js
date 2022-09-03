@@ -21,6 +21,10 @@ const Text = styled.p`
 
 const Container = styled.div`
     margin-bottom:45px;
+    @keyframes fadeIn {
+        from {opacity: 0%} to {opacity:100%}
+    }
+    animation: fadeIn 1s;
 `
 
 
