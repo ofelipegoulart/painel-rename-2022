@@ -1,82 +1,12 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-
-const Search = styled.div`
-    @keyframes fadeIn {
-            from {opacity: 0%} to {opacity:100%}
-        }
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    align-content:center;
-    width:100%;
-    height:80vh;
-    animation: fadeIn 1s;
-    margin-bottom:8rem;
-`;
-
-const SearchArea = styled.div`
-`;
-
-const Titulo1 = styled.h2`
-    font-family:Open Sans;
-    font-weight:bold;
-    font-size:30px;
-    text-transform: uppercase;
-    color: #034263;
-    margin:70px auto 30px auto;
-`;
-
-const Input = styled.input`
-    height:80%;
-    margin:0;
-    vertical-align: top;
-`;
-
-const Button = styled.button`
-    margin:0;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    font-size: 16px;
-    text-transform: uppercase;
-    background-color:#034263;
-`;
-
-const Results = styled.table`
-    margin:4rem;
-    border-collapse: collapse;
-    width: 75%;
-`;
-
-const TableRows = styled.tr`
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-`;
-
-const TableElement = styled.td`
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-`;
-
-const TableHeader = styled.th`
-    background-color:#034263;
-    color: #fff;
-    font-weight: 500;
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-`;
-
-const Form = styled.form`
-    height:40px;  
-`;
+import pesquisarStyles from '../assets/css/pesquisarStyles';
 
 function Pesquisa() {
     const [medicines,setMedicines] = useState("");
     const [resources, setResources] = useState([]);
+    const { Search, SearchArea, Titulo1, Input, Button, 
+        Results, ResultsBody, TableRows, TableElement, 
+        TableHeader, Form } = pesquisarStyles;
 
     const onSubmitForm = async e => {
         e.preventDefault();
@@ -105,7 +35,7 @@ function Pesquisa() {
                 </Form>
             </SearchArea>
             <Results>
-                <tbody>
+                <ResultsBody>
                     <TableRows>
                             <TableHeader>Denominação Genérica</TableHeader>
                             <TableHeader>Composição/Concentração</TableHeader>
@@ -124,7 +54,7 @@ function Pesquisa() {
                         <TableElement>{resource.Classificação_AWaRe}</TableElement>
                     </TableRows>
                     ))}
-                </tbody>
+                </ResultsBody>
             </Results>
         </Search>
     )};
