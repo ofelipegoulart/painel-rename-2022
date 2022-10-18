@@ -96,6 +96,15 @@ const Form = styled.form`
     height:40px;  
 `;
 
+const Info = styled.a`
+    font-family:Open Sans;
+    font-size:16px;
+    text-align:justify;
+    margin:auto;
+    text-decoration:none;
+    color:#000;
+`;
+
 export default {
     Search,
     SearchArea,
@@ -107,5 +116,6 @@ export default {
     TableRows,
     TableElement,
     TableHeader,
-    Form
+    Form,
+    Info
 }

@@ -1,20 +1,18 @@
 import React, { useState } from 'react';
-import pesquisarStyles from '../assets/css/pesquisarStyles';
+import pesquisarStyles from '../assets/css/views/pesquisarStyles';
 
 function Pesquisa() {
     const [medicines,setMedicines] = useState("");
     const [resources, setResources] = useState([]);
     const { Search, SearchArea, Titulo1, Input, Button, 
         Results, ResultsBody, TableRows, TableElement, 
-        TableHeader, Form } = pesquisarStyles;
+        TableHeader, Form, Info } = pesquisarStyles;
 
     const onSubmitForm = async e => {
         e.preventDefault();
         try {
-          const response = await fetch(`http://localhost:8080/searchinfo/?name=${medicines}`);
-    
+          const response = await fetch(`http://renamebackend2022-env.eba-xy2gpjud.sa-east-1.elasticbeanstalk.com/searchinfo/?name=${medicines}`);
           const parseResponse = await response.json();
-    
           setResources(parseResponse);
         } catch (err) {
           console.error(err.message);
@@ -56,6 +54,7 @@ function Pesquisa() {
                     ))}
                 </ResultsBody>
             </Results>
+            <Info>A legenda para as informações contidas estão <b><Info href="/legenda">aqui</Info></b></Info>
         </Search>
     )};
   
