@@ -8,7 +8,6 @@ const Search = styled.div`
         display:flex;
         flex-direction:column;
         align-items:center;
-        width:100%;
         animation: fadeIn 1s;
         margin-bottom:8rem;
     }
@@ -33,10 +32,12 @@ const Titulo1 = styled.h2`
 
 const Input = styled.input`
     @media screen and (min-width:320px) {
-    height:75%;
+    height:83%;
     width:80%;
     margin:0 auto;
     vertical-align: top;
+    border:none;
+    border: 1px solid gray;
     }
 `;
 
@@ -48,25 +49,19 @@ const Button = styled.button`
     font-size: 16px;
     text-transform: uppercase;
     background-color:#034263;
+    cursor:pointer;
 `;
 
 const Results = styled.table`
     border-collapse: collapse;
-    @media screen and (min-width: 320px) {
-        margin:4rem;
-        overflow-x: scroll;
-    }
-    
+    border: 1px solid #034263;
 `;
 
 const ResultsBody = styled.tbody`
-    @media screen and (min-width: 320px) {
-        overflow-x: auto;
-    }
+    border: 1px solid #034263;
 `;
 
 const TableRows = styled.tr`
-    border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     @media screen and (min-width: 320px) {
@@ -75,7 +70,7 @@ const TableRows = styled.tr`
 `;
 
 const TableElement = styled.td`
-    border: 1px solid #dddddd;
+    border: 1px solid #025;
     text-align: left;
     padding: 8px;
     @media screen and (min-width: 320px) {
@@ -87,7 +82,8 @@ const TableHeader = styled.th`
     background-color:#034263;
     color: #fff;
     font-weight: 500;
-    border: 1px solid #dddddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     text-align: left;
     padding: 8px;
 `;
@@ -99,10 +95,37 @@ const Form = styled.form`
 const Info = styled.a`
     font-family:Open Sans;
     font-size:16px;
-    text-align:justify;
-    margin:auto;
+    text-align:center;
     text-decoration:none;
     color:#000;
+`;
+
+const TextLabel = styled.a`
+    font-family:Open Sans;
+    font-size:16px;
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+    padding-top:2rem;
+`;
+
+const TableField = styled.div`
+    padding-top:2rem;
+    @media screen and (min-width:320px) and (max-width:1001px) {
+        overflow-x:auto;
+        width:70vw;
+    }
+    @media screen and (min-width:1001px) {
+        margin:auto;
+        width:66vw;
+    }
+`;
+
+const LoadingSymbol = styled.div`
+    margin:auto;
+    padding:0.5rem;
+    @media screen and (min-width:320px) and (max-width:600px) {
+    }
 `;
 
 export default {
@@ -117,5 +140,8 @@ export default {
     TableElement,
     TableHeader,
     Form,
-    Info
+    Info,
+    TableField,
+    TextLabel,
+    LoadingSymbol
 }

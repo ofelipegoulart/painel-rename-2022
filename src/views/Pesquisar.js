@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
+import ReactLoading from 'react-loading';
 import pesquisarStyles from '../assets/css/views/pesquisarStyles';
 
 function Pesquisa() {
     const [medicines,setMedicines] = useState("");
+    const [loading, setLoading] = useState(false);
     const [resources, setResources] = useState([]);
     const { Search, SearchArea, Titulo1, Input, Button, 
         Results, ResultsBody, TableRows, TableElement, 
-        TableHeader, Form, Info } = pesquisarStyles;
+        TableHeader, Form, Info, TableField, TextLabel, LoadingSymbol } = pesquisarStyles;
 
     const onSubmitForm = async e => {
         e.preventDefault();
         try {
-          const response = await fetch(`http://renamebackend2022-env.eba-xy2gpjud.sa-east-1.elasticbeanstalk.com/searchinfo/?name=${medicines}`);
+          setLoading(true)
+          const response = await fetch(`https://cors-everywhere-me.herokuapp.com/http://renamebackend2022-env.eba-xy2gpjud.sa-east-1.elasticbeanstalk.com/searchinfo/?name=${medicines}`);
           const parseResponse = await response.json();
+          setLoading(false)
           setResources(parseResponse);
         } catch (err) {
           console.error(err.message);
         }
     }
+
     return (
         <Search>
             <Titulo1>Painel de Pesquisa</Titulo1>
@@ -32,6 +37,9 @@ function Pesquisa() {
                     <Button type="submit" name="name"><span className="material-symbols-outlined">search</span></Button>
                 </Form>
             </SearchArea>
+            {loading && 
+            <LoadingSymbol><ReactLoading type={"spokes"} color={"#034263"} /></LoadingSymbol>}
+            {!loading && <TableField>
             <Results>
                 <ResultsBody>
                     <TableRows>
@@ -54,7 +62,9 @@ function Pesquisa() {
                     ))}
                 </ResultsBody>
             </Results>
-            <Info>A legenda para as informações contidas estão <b><Info href="/legenda">aqui</Info></b></Info>
+            </TableField>}
+            {(resources.length == 0 && !loading) && <TextLabel>Nenhum resultado</TextLabel>}
+            <TextLabel>A legenda para as informações contidas estão <b><Info href="/legenda/">aqui</Info></b></TextLabel>
         </Search>
     )};
   

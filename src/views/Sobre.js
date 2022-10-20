@@ -3,7 +3,7 @@ import sobreStyles from '../assets/css/views/sobreStyles';
 
 function Sobre() {
 
-    const {Titulo1, Text, Container} = sobreStyles;
+    const {Titulo1, Text, Container, Link} = sobreStyles;
     return (
     <div style={{marginBottom:"5rem"}}>
         <Container>
@@ -36,6 +36,17 @@ function Sobre() {
                 <Text>
                     Uma possível implementação futura será de conectar a API de Knowledge Graph da Google para obter informações sobre o fármaco/insumo, de forma a compreender seu princípio ativo, sua descrição e outras informações.
                 </Text>
+        </Container>
+
+        <Container>
+            <Titulo1>Códigos-Fonte</Titulo1>
+                <Text>
+                    O código-fonte da interface pode ser conferido <Link href="https://github.com/ofelipegoulart/painel-rename-2022" target="_blank">aqui.</Link>
+                </Text>
+                <Text>
+                    Para conferir o código-fonte da criação da base de dados, clique <Link href="https://github.com/ofelipegoulart/rename-2022-pandas" target="_blank">aqui.</Link>
+                </Text>
+                
         </Container>
         
         <Container>

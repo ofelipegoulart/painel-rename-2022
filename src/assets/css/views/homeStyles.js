@@ -86,9 +86,59 @@ const ImageSUS = styled.img`
     padding-top:2rem;
 }`;
 
+const Button = styled.button`
+
+    @media screen and (min-width:320px) {
+        border: none;
+        margin:auto;
+        text-transform: uppercase;
+        width:40vw;
+        height:5vh;
+        font-size:14px;
+        background-color: #25409a;
+        color: #fff;    
+    }
+
+    @media screen and (min-width: 600px) {
+        border: none;
+        width:35vw;
+        height:5vh;
+        margin:auto;
+        text-transform: uppercase;
+        font-size:18px;
+        background-color: #25409a;
+        color: #fff;    
+    }
+
+    
+    @media screen and (min-width: 700px) {
+        border: none;
+        width:30vw;
+        height:6vh;
+        margin:auto;
+        text-transform: uppercase;
+        font-size:18px;
+        background-color: #25409a;
+        color: #fff;    
+    }
+
+    @media screen and (min-width: 910px) {
+        border: none;
+        width:15vw;
+        height:8vh;
+        margin:auto;
+        text-transform: uppercase;
+        font-size:18px;
+        background-color: #034263;
+        color: #fff;    
+    }
+
+    `;
+
 export default {
     Banner,
     Titulo1,
     HightlightText,
-    ImageSUS
+    ImageSUS,
+    Button
 }

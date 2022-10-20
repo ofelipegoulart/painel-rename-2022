@@ -23,7 +23,7 @@ function Legenda() {
             <Titulo1>Código ATC</Titulo1>
                 <Text>
                     Dentro da apresentação do documento do RENAME, existem duas classificações para os insumos do SUS: pelo apêndice A, que é a partir do  Sistema de
-Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeutic Chemical (ATC) Classification System. As iniciais de cada código representam o sistema humano que o insumo atua, sendo eles:
+Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeutic Chemical (ATC) Classification System, e pelo apêndice B, no qual os insumos são divididos em grupos de financiamento da Assistência Farmacêutica. Para esse projeto, foi escolhido a categorização pelo Apêndice A. <br />As iniciais de cada código representam o sistema humano que o insumo atua, sendo eles:
                 </Text>
                 <Results>
                     <TableRows>
@@ -37,7 +37,7 @@ Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeu
                         </TableRows>
                         <TableRows>
                             <TableElement>B</TableElement>
-                            <TableElement>Sangue e órgãos formadores de sangu</TableElement>
+                            <TableElement>Sangue e órgãos formadores de sangue</TableElement>
                         </TableRows>
                         <TableRows>
                             <TableElement>C</TableElement>
@@ -65,11 +65,11 @@ Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeu
                         </TableRows>
                         <TableRows>
                             <TableElement>M</TableElement>
-                            <TableElement>Sistema musculoesquelético</TableElement>
+                            <TableElement>Sistema Musculoesquelético</TableElement>
                         </TableRows>
                         <TableRows>
                             <TableElement>N</TableElement>
-                            <TableElement>Sistema nervoso</TableElement>
+                            <TableElement>Sistema Nervoso</TableElement>
                         </TableRows>
                         <TableRows>
                             <TableElement>P</TableElement>
@@ -77,11 +77,11 @@ Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeu
                         </TableRows>
                         <TableRows>
                             <TableElement>R</TableElement>
-                            <TableElement>Sistema respiratório</TableElement>
+                            <TableElement>Sistema Respiratório</TableElement>
                         </TableRows>
                         <TableRows>
                             <TableElement>S</TableElement>
-                            <TableElement>Órgãos sensoriais</TableElement>
+                            <TableElement>Órgãos Sensoriais</TableElement>
                         </TableRows>
                         <TableRows>
                             <TableElement>V</TableElement>
@@ -116,7 +116,7 @@ Classificação Anatômica Terapêutica Química, do inglês Anatomical Therapeu
                         </TableRows>
                         <TableRows>
                             <TableElement>Hospitalar</TableElement>
-                            <TableElement>Compreende o emprego de medicamentos em pacientes hospitalares.</TableElement>
+                            <TableElement>Compreende o emprego de medicamentos em pacientes hospitalares</TableElement>
                         </TableRows>
                     </ResultsBody>
                 </Results>

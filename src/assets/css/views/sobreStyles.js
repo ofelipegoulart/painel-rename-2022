@@ -10,6 +10,12 @@ const Titulo1 = styled.h2`
     margin-bottom:"1.5rem";
 `;
 
+const Link = styled.a`
+    text-decoration: none;
+    color:#000;
+    font-weight:bold;
+`;
+
 const Text = styled.p`
     font-family:Open Sans;
     font-size:18px;
@@ -32,5 +38,6 @@ const Container = styled.div`
 export default {
     Titulo1,
     Text,
-    Container
+    Container,
+    Link
 }

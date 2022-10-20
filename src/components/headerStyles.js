@@ -42,13 +42,11 @@ const NavigationLinks = styled.ul`
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
-        display: flex;         
-        justify-content: flex-end;
+        display: flex;
+        justify-content: space-between;
         list-style-type: none;
         width:11rem;
-        align-items: start;
-        margin-top:auto;
-        margin-bottom:auto;
+        padding-top:0;
         margin-right:0;
     }
 
@@ -83,43 +81,38 @@ const LogoWeb = styled.img`
     }
 
     @media (min-width:480px) {
+        width:45vw;
+        height:3vh;
+    }
+
+    @media (min-width:550px) {
         width:50vw;
         height:4vh;
     }
 
-    @media (min-width:550px) {
+    @media (min-width:801px) {
         width:40vw;
         height:4vh;
     }
 
-    @media (min-width:650px) {
+    @media (min-width:880px) {
         width:35vw;
         height:4vh;
     }
 
-    @media (min-width:801px) {
+    @media (min-width:1075px) {
         width:30vw;
         height:4vh;
     }
 
-    @media (min-width:900px) {
-        width:25vw;
-        height:4vh;
-    }
-
-    @media (min-width:1100px) {
-        width:25vw;
-        height:5vh;
-    }
-
-    @media (min-width:1366px) {
+    @media (min-width:1325px) {
         width:25vw;
         height:5vh;
     }
 
     @media (min-width:1600px) {
-        width:90%;
-        height:65%;
+        width:25vw;
+        height:5vh;
     }
 `;
 

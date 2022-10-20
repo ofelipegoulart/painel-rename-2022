@@ -1,4 +1,4 @@
-import headerStyles from '../assets/css/components/headerStyles';
+import headerStyles from './headerStyles';
 import logo from '../assets/img/logo.png';
 
 function Header() {

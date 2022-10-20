@@ -45,7 +45,6 @@ function Footer() {
   return (
       <FooterSite>
         <Disclaimer>ATENÇÃO: o sistema desenvolvido é extra-oficial e não possui relação com o Ministério da Saúde.</Disclaimer>
-        <Disclaimer>Código-fonte: <GithubLink href="https://github.com/ofelipegoulart/painel-rename-2022" target="_blank">Github</GithubLink></Disclaimer>
       </FooterSite>
   );
 }
